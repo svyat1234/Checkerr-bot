@@ -1,0 +1,30 @@
+.header {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 21px 34px;
+    background: $gray;
+    border-radius: 17px;
+    border: 1px solid $gray;
+
+    &__logo {
+        justify-self: start;
+    }
+    
+    &__nav {
+      grid-column: 2;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    &__nav-link {
+        text-decoration: none;
+        color: $light;
+    }
+    
+    &__search-button {
+      justify-self: end;
+    }
+}

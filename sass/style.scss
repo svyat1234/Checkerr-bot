@@ -1,0 +1,25 @@
+// main styles
+
+@import "base/variables";
+@import "base/fonts";
+@import "base/settings";
+
+
+// layouts
+
+@import "layouts/header";
+// @import "layouts/footer";
+
+
+// index.html
+
+@import "templates/promo";
+@import "templates/advantages";
+@import "templates/service";
+@import "templates/difference";
+@import "templates/reviews";
+
+
+// media
+
+@import "base/media";

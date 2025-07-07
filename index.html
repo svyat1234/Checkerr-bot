@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бот</title>
+    <link rel="icon" href="./img/logo.svg.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+</head>
+<body>
+    <main id="main">
+
+        <!-- HEADER -->
+        <header class="header container">
+            <a href="./index.html" class="haeder__logo">
+                <img src="./img/" alt="" class="header__logo-img">
+            </a>
+
+            <nav class="header__nav">
+                <a href="#" class="header__nav-link">Что мы делаем</a>
+                <a href="#" class="header__nav-link">Компания</a>
+                <a href="#" class="header__nav-link">Кейсы</a>
+                <a href="#" class="header__nav-link">Контакты</a>
+            </nav>
+            <!-- /.header__nav -->
+
+            <button class="header__search-button"></button>
+
+        </header>
+        <!-- /.header -->
+
+        <!-- PROMO -->
+        <section class="promo container">
+            <div class="promo__heading">
+                <h1 class="promo__title main-title">IT-заказы и исполнители — <span class="accent">в одном боте</span></h1>
+
+                <div class="promo__heading-info">
+                    <div class="promo__heading-texts">
+                        <p class="promo__heading-text main-text">Наш сервис в реальном времени анализирует сотни площадок и присылает только релевантные заказы — по вашим фильтрам.</p>
+                        <p class="promo__heading-text main-text">ИИ обрабатывает данные и отбирает лучшие предложения на рынке. Экономьте время, получайте выгодные задачи первыми!</p>
+                    </div>
+                    <!-- /.promo__heading-texts -->
+                    <a href="#" class="promo__heading-link section-link">
+                        <span class="section-link__text">перейти к боту</span>
+                        <span class="section-link__icon"></span>
+                    </a>
+                </div>
+                <!-- /.promo__heading-info -->
+            </div>
+            <!-- /.promo__heading -->
+
+            <div class="promo__footer">
+
+                <div class="promo__top-works">
+                    <a href="#" class="promo__tg-link"></a>
+                </div>
+
+                <div class="promo__statistic-cards">
+                    <div class="promo__statistic-card">
+                        <div class="promo__statistic-title-wrap">
+                            <span class="promo__statistic-title">70</span>
+                            <span class="promo__statistic-sub">%</span>
+                        </div>
+                        <!-- ./promo__statistic-card -->
+                        <span class="promo__statistic-text main-text">меньше времени на поиск клиентов</span>
+                    </div>
+                    <!-- /.promo__statistic-card -->
+                    <div class="promo__statistic-card">
+                        <div class="promo__statistic-title-wrap">
+                            <span class="promo__statistic-title">3</span>
+                            <span class="promo__statistic-sub">/4</span>
+                        </div>
+                        <!-- ./promo__statistic-card -->
+                        <span class="promo__statistic-text main-text">находят проект в первые 48 часов</span>
+                    </div>
+                    <!-- /.promo__statistic-card -->
+                </div>
+                <!-- /.promo__statistic-cards -->
+
+            </div>
+            <!-- /.promo__footer -->
+        </section>
+        <!-- /.promo -->
+
+        <!-- ADVANTAGES -->
+        <section class="advantages container">
+            <div class="advantages__heading">
+                <h2 class="advantages__title section-title">Наши <span class="accent">ПРЕИМУЩЕСТВА</span></h2>
+                <div class="advantages__heading-info main-text">
+                    <p class="advantages__heading-info-text">Получайте отборные проекты прямо в Telegram, пока другие тратят время на ручной поиск.</p>
+                </div>
+            </div>
+            <!-- /.advantages__heading -->
+
+            <div class="advantages__cards">
+                <div class="advantages__card">
+                    <div class="advantages__card-icon"></div>
+
+                    <div class="advantages__card-content">
+                        <span class="advantages__card-title">Это удобно</span>
+                        <span class="advantages__card-text main-text">Выбирайте нужную категорию и получайте заказы прямо в телеграмм</span>
+                    </div>
+                    <!-- /.advantages__card-content -->
+                </div>
+                <!-- /.advantages__card -->
+
+                <div class="advantages__card">
+                    <div class="advantages__card-icon"></div>
+
+                    <div class="advantages__card-content">
+                        <span class="advantages__card-title">Клиенты со всех площадок</span>
+                        <span class="advantages__card-text main-text">Тебе остается только написать и&nbsp;договориться</span>
+                    </div>
+                    <!-- /.advantages__card-content -->
+                </div>
+                <!-- /.advantages__card -->
+
+                <div class="advantages__card">
+                    <div class="advantages__card-icon"></div>
+
+                    <div class="advantages__card-content">
+                        <span class="advantages__card-title">Зарабатывай сколько хочешь</span>
+                        <span class="advantages__card-text main-text">Не ограничиваем клиентов, ты сам выбираешь сколько хочешь зарабатывать</span>
+                    </div>
+                    <!-- /.advantages__card-content -->
+                </div>
+                <!-- /.advantages__card -->
+
+            </div>
+            <!-- /.advantages__cards -->
+        </section>
+        <!-- /.advantages -->
+
+        <!-- SERVICE -->
+        <section class="service section container">
+            <div class="service__heading">
+                <span class="service__sub section-sub">кАК ЭТО РАБОТАЕТ?</span>
+                <div class="service__title-wrap">
+                    <h2 class="service__title section-title">Как пользоваться <span class="accent">сервисом</span></h2>
+                </div>
+            </div>
+            <!-- /.service__heading -->
+            
+            <a href="" class="service__link section-link">
+                <span class="section-link__text">перейти к боту</span>
+                <span class="section-link__icon"></span>
+            </a>
+
+
+            <div class="scroll-section">
+                
+                <div class="text-container">
+                    <div class="text-section">
+                        <div class="text-item" id="text1">
+                            <h2>Заголовок 1</h2>
+                            <p>Инновационные решения для современного бизнеса. Мы создаем цифровые продукты, которые помогают компаниям расти и развиваться.</p>
+                        </div>
+                    </div>
+                    <div class="text-section">
+                        <div class="text-item" id="text2">
+                            <h2>Заголовок 2</h2>
+                            <p>Передовые технологии в разработке программного обеспечения. Используем искусственный интеллект и машинное обучение для решения сложных задач.</p>
+                        </div>
+                    </div>
+                    <div class="text-section">
+                        <div class="text-item" id="text3">
+                            <h2>Заголовок 3</h2>
+                            <p>Дизайн, ориентированный на пользователя. Создаем интуитивно понятные интерфейсы, которые повышают вовлеченность клиентов.</p>
+                        </div>
+                    </div>
+                    <div class="text-section">
+                        <div class="text-item" id="text4">
+                            <h2>Заголовок 4</h2>
+                            <p>Комплексная поддержка на всех этапах проекта. От концепции до реализации и дальнейшего развития вашего продукта.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video class="video-item" id="video1" autoplay muted loop playsinline>
+                            <source src="./img/clash1.mp4" type="video/mp4">
+                        </video>
+                        <video class="video-item" id="video2" autoplay muted loop playsinline>
+                            <source src="./img/clash2.mp4" type="video/mp4">
+                        </video>
+                        <video class="video-item" id="video3" autoplay muted loop playsinline>
+                            <source src="./img/clash3.mp4" type="video/mp4">
+                        </video>
+                        <video class="video-item" id="video4" autoplay muted loop playsinline>
+                            <source src="./img/clash4.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- /.service -->
+
+        <section class="difference section container">
+            <div class="difference__heading">
+                <span class="difference__sub section-sub">чем отличается?</span>
+                <div class="difference__title-wrap">
+                    <h2 class="difference__title section-title">Что вы получаете?</h2>
+                </div>
+                <!-- /.difference__title-wrap -->
+            </div>
+            <!-- /.difference__headig -->
+            <div class="difference__cards">
+                <div class="difference__card difference__card--start">
+                    <img class="difference__card-icon" src="" alt="">
+                    <div class="difference__card-info">
+                        <h3 class="difference__card-title">Целевые лиды</h3>
+                        <span class="difference__card-text main-text">Бот отбирает заказы по вашей нише среди тысяч сообщений, отсеивая спам.</span>
+                    </div>
+                    <!-- /.difference__card-ino -->
+                </div>
+                <div class="difference__midle-cards">
+                    <div class="difference__card difference__card--horizontal">
+                        <img class="difference__card-icon" src="" alt="">
+                        <div class="difference__card-info">
+                            <h3 class="difference__card-title">Мгновенные уведомления</h3>
+                            <span class="difference__card-text main-text">Как только клиент оставляет заказ — вы сразу получаете его в боте. Вы среди первых!</span>
+                        </div>
+                        <!-- /.difference__card-ino -->
+                    </div>
+                    <!-- /.difference__card difference__card--horizontal -->
+                    <div class="difference__card">
+                        <img class="difference__card-icon" src="" alt="">
+                        <div class="difference__card-info">
+                            <h3 class="difference__card-title">Количество категорий </h3>
+                            <span class="difference__card-text main-text">Как только клиент оставляет заказ — вы сразу получаете его в боте. Вы среди первых!</span>
+                        </div>
+                        <!-- /.difference__card-ino -->
+                    </div>
+                    <!-- /.difference__card -->
+                </div>
+                <!-- /.difference_midle-cards -->
+                <div class="difference__card difference__card--end">
+                    <img class="difference__card-icon" src="" alt="">
+                    <div class="difference__card-info">
+                        <h3 class="difference__card-title">Экономия времени </h3>
+                        <span class="difference__card-text main-text">Больше не нужно мониторить чаты вручную. Бот круглосуточно ищет клиентов за вас.</span>
+                    </div>
+                    <!-- /.difference__card-ino -->
+                </div>
+            </div>
+            <!-- /.difference__cards -->
+        </section>
+        <!-- /.difference -->
+
+        <section class="reviews section">
+            <div class="reviews__heading">
+                <span class="reviews__sub section-sub">Отзывы</span>
+                <div class="reviews__title-wrap">
+                    <h2 class="reviews__title section-title">Что говорят <span class="accent">о нас?</span></h2>
+                </div>
+                <!-- /.reviews__title-wrap -->
+            </div>
+            <!-- /.reviews__heading -->
+            <!-- INSERT_YOUR_CODE -->
+            <div class="swiper reviews-swiper">
+                <div class="swiper-wrapper">
+                    <div class="reviews__slide swiper-slide">
+                        <div class="reviews__slide-stars">
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--dark"></div>
+                        </div>
+                        <!-- /.reviews__slide-stars -->
+                        <div class="reviews__slide-icon"></div>
+                        <p class="reviews__slide-text main-text">Отличная команда разработчиков, справились с поставленой задачей на 110%, была разработана с ноля под ключ корпоративная платформа для нашей компании.  оля под ключ корпоративная платформа для нашей компании. оля под ключ корпоративная платформа для нашей компании. </p>
+                        
+                        <div class="reviews__slide-footer">
+                            <span class="reviews__slide-name">Анастасия Суханова</span>
+                            <span class="reviews__slide-post">директор по маркетингу компании “технолид”</span>
+                        </div>
+                        <!-- /.reviews__slide-footer -->
+                        <div class="reviews__slide-img-wrap">
+                            <img src="./img/slide-img01.png" alt="" class="reviews__slide-img">
+                        </div>
+                    </div>
+                    <div class="reviews__slide swiper-slide">
+                        <div class="reviews__slide-icon"></div>
+                                                <div class="reviews__slide-stars">
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--dark"></div>
+                        </div>
+                        <!-- /.reviews__slide-stars -->
+                        <p class="reviews__slide-text main-text">Используем одни из самых современных и лучших  CMS — Prismic и Stapi.</p>
+                        
+                        <div class="reviews__slide-footer">
+                            <span class="reviews__slide-name">Виктор Журавлев</span>
+                            <span class="reviews__slide-post">директор по маркетингу компании “технолид”</span>
+                        </div>
+                        <!-- /.reviews__slide-footer -->
+                        <div class="reviews__slide-img-wrap">
+                            <img src="./img/slide-img02.png" alt="" class="reviews__slide-img">
+                        </div>
+                    </div>
+                    <div class="reviews__slide swiper-slide">
+                        <div class="reviews__slide-icon"></div>
+                        <div class="reviews__slide-stars">
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--dark"></div>
+                        </div>
+                        <!-- /.reviews__slide-stars -->
+                        <p class="reviews__slide-text main-text">Также мы можем подключить любую удобную для вас CMS-систему.</p>
+                        
+                        <div class="reviews__slide-footer">
+                            <span class="reviews__slide-name">Виктор Журавлев</span>
+                            <span class="reviews__slide-post">директор по маркетингу компании “технолид”</span>
+                        </div>
+                        <!-- /.reviews__slide-footer -->
+                        <div class="reviews__slide-img-wrap">
+                            <img src="./img/slide-img01.png" alt="" class="reviews__slide-img">
+                        </div>
+                    </div>
+                    <div class="reviews__slide swiper-slide">
+                        <div class="reviews__slide-icon"></div>
+                                                <div class="reviews__slide-stars">
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--light"></div>
+                            <div class="reviews__slide-star reviews__slide-star--dark"></div>
+                        </div>
+                        <!-- /.reviews__slide-stars -->
+                        <p class="reviews__slide-text main-text">Отличная команда разработчиков, справились с поставленой задачей на 110%, была разработана с ноля под ключ корпоративная платформа для нашей компании.  оля под ключ корпоративная платформа для нашей компании. оля под ключ корпоративная платформа для нашей компании. </p>
+                        
+                        <div class="reviews__slide-footer">
+                            <span class="reviews__slide-name">Анастасия Суханова</span>
+                            <span class="reviews__slide-post">директор по маркетингу компании “технолид”</span>
+                        </div>
+                        <!-- /.reviews__slide-footer -->
+                        <div class="reviews__slide-img-wrap">
+                            <img src="./img/slide-img02.png" alt="" class="reviews__slide-img">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!-- /.reviews -->
+
+        <div class="questions section container">
+            
+        </div>
+        <!-- /.questions -->
+
+    </main>
+</body>
+</html>

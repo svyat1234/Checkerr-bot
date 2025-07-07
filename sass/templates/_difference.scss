@@ -1,0 +1,84 @@
+.difference {
+
+    &__heading {
+        @include flex-start-between;
+    }
+
+    &__title-wrap {
+        @include column;
+    }
+
+    &__title {
+        max-width: 580px;
+    }
+
+    &__cards {
+        margin-top: 85px;
+        display: flex;
+        gap: 20px;
+        min-height: 636px;
+    }
+
+    &__midle-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 100%;
+        width: 100%;
+
+        & .difference__card:last-child {
+            max-height: 100%;
+            height: 100%;
+        }
+    }
+
+    &__card {
+        padding: 45px 45px 70px 45px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 35px;
+        border: 1px solid rgba($light, 0.03);
+        justify-content: space-between;
+
+        &--start, &--end {
+        align-self: stretch;
+        }
+
+        &--start {
+            max-width: 560px;
+            width: 100%;
+        }
+
+        &--end {
+            max-width: 414px;
+            width: 100%;
+        }
+
+        &--horizontal {
+            flex-direction: row;
+        }
+
+        &--end, &--horizontal {
+            border: none;
+            background: rgba($light, 0.03);
+        }
+
+    }
+
+    &__card-info {
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+    }
+
+    &__card-title {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    &__card-text {
+        max-width: 479px;
+    }
+
+}

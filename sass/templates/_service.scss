@@ -1,0 +1,93 @@
+.service {
+
+    &__heading {
+        @include flex-start-between;
+    }
+
+    &__title-wrap {
+        @include column;
+    }
+
+    &__title {
+        max-width: 690px;
+    }
+
+    &__link {
+        margin-top: 67px;
+    }
+}
+
+.scroll-section {
+    display: flex;
+    height: 400vh;
+    position: relative;
+    justify-content: space-between;
+}
+
+.text-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    opacity: 0;        
+    transition: opacity 0.5s; 
+}
+
+.text-section.active {
+    opacity: 1;      
+}
+
+.text-item {
+    max-width: 740px;
+    width: 100%;
+    border: 1px solid rgba($light, 0.08);
+    border-radius: $border-radius;
+    padding: 47px;
+}
+
+.text-item h2 {
+    font-size: 30px;
+    margin-bottom: 1.5rem;
+}
+
+.text-item p {
+    font-size: 22px;
+    line-height: 30px;
+    max-width: 434px;
+}
+
+.video-container {
+    @include column;
+    margin-top: -50px;
+    position: sticky;
+    top: 5%;
+    height: 875px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 425px;
+    height: 875px;
+    border-radius: inherit;
+    background: url(../../img/phone.png) no-repeat center / cover;
+}
+
+.video-item {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.video-item.active {
+    opacity: 1;
+}

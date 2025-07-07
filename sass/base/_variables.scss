@@ -1,0 +1,39 @@
+$light: #fff;
+$accent: #14CF93;
+$dark: rgba(255, 255, 255, 0.03);
+$gray: rgba(255, 255, 255, 0.05);
+
+$desktop-width: 1920px;    // Ширина viewport
+$container: 1720px;        // Желаемая ширина контейнера
+
+$border-radius: 15px;
+$projects-thumb: 125px;
+
+$section-top-margin: 250px;
+
+
+@mixin flex-start-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@mixin flex-center-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin column {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: calc($container / 2);
+  width: 100%;
+}
