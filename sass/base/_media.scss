@@ -25,6 +25,14 @@
     }
 }
 
+@media screen and (max-width: 1400px) {
+    .promo {
+        &::after {
+            display: none;
+        }
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .promo {
 
@@ -83,9 +91,26 @@
             right: 70px;
         }
     }
+
+    .service {
+
+        &__title {
+            font-size: clamp(40px, 4vw, 70px);
+        }
+    }
 }
 
 @media screen and (max-width: 1024px) {
+    .advantages__heading,
+    .service__heading,
+    .difference__heading,
+    .reviews__heading,
+    .questions__heading {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
     .advantages{
 
         &__cards {
@@ -112,9 +137,63 @@
             }
         }
     }
+
+    .service {
+
+        &__title {
+            font-size: 50px
+        }
+        
+        &__link {
+            margin-top: 40px;
+        }
+    }
 }
 
 @media screen and (max-width: 900px) {
+    .main-title, .section-title {
+        font-size: clamp(30px, 8vw, 70px);
+    }
+
+    .main-text {
+        font-size: 18px;
+        line-height: 120%;
+    }
+
+    .promo {
+        padding: 50px;
+
+        &__heading-texts {
+            padding-right: 0;
+        }
+
+        &__footer {
+            position: relative;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 50px;
+        }
+
+        &__statistic-cards {
+            max-width: 100%;
+            gap: 50px;
+        }
+
+        &__statistic-title {
+            font-size: 150px;
+            font-size: clamp(40px, 17vw, 150px);
+        }
+
+        &__statistic-text {
+            max-width: 150px;
+        }
+
+        &__top-works {
+            display: none; // ВРЕМЕННО!
+        }
+    }
+
     .advantages {
 
         &__heading {
@@ -131,7 +210,20 @@
 }
 
 @media screen and (max-width: 768px) {
+    .section {
+        margin-top: 100px;
+    }
+
+    .promo {
+        padding: 30px;
+
+        
+        &__statistic-sub {
+            font-size: clamp(20px, 10vw, 150px);
+        }
+    }
     .advantages{
+        margin-top: 100px;
 
         &__cards {
             display: grid;
@@ -154,10 +246,39 @@
         &__card-text {
             max-width: 500px;
         }
+
     }
 }
 
 @media screen and (max-width: 480px) {
+    .section-link {
+        
+        &__text {
+            font-size: 14px;
+            padding: 0px 30px;
+        }
+
+        &__icon {
+            width: 90px;
+        }
+    }
+
+    .promo {
+        padding-bottom: 50px;
+
+        &__statistic-cards {
+            gap: 20px;
+        }
+
+        &__statistic-text {
+            font-size: 14px;
+        }
+
+        &__footer {
+            margin-top: 50px;
+        }
+    }
+
     .advantages{
 
         &__card-icon {
