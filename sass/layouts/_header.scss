@@ -26,5 +26,10 @@
     
     &__search-button {
       justify-self: end;
+      width: 19px;
+      height: 19px;
+      background: url(../../img/search.svg) no-repeat center / cover;
+      border: none;
+      cursor: pointer;
     }
 }

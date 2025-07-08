@@ -91,3 +91,41 @@
 .video-item.active {
     opacity: 1;
 }
+
+ /* Мобильная версия */
+ .mobile-section {
+    display: none;
+}
+
+.mobile-item {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-text {
+    padding: 15vh 10% 5%;
+    flex: 1;
+}
+
+.mobile-video {
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mobile-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .scroll-section {
+        display: none;
+    }
+    
+    .mobile-section {
+        display: block;
+    }
+}

@@ -65,6 +65,11 @@
 
     }
 
+    &__card-icon {
+        max-width: 110px;
+        max-height: 110px;
+    }
+
     &__card-info {
         display: flex;
         flex-direction: column;

@@ -28,7 +28,7 @@
         background: $gray;
         border-radius: $border-radius;
         padding: 35px;
-        height: 414px;
+        min-height: 414px;
 
         &:nth-child(1) .advantages__card-icon {
             background: url(../../img/adv-1.svg) no-repeat center / cover;

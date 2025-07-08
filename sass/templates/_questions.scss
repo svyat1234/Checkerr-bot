@@ -1,0 +1,97 @@
+.questions {
+
+    &__heading {
+        @include flex-start-between;
+    }
+
+    &__title-wrap {
+        @include column;
+    }
+
+    &__title {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 35px;
+            height: 35px;
+            top: 50%;
+            left: -68px;
+            transform: translateY(-50%);
+            background: url(../../img/accent-star.svg) no-repeat center / cover;
+        }
+    }
+
+    &__cards {
+        margin-top: 110px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__card {
+        padding-top: 40px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        border-top: 1px solid $gray;
+        cursor: pointer;
+        min-height: 131px;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+        padding-bottom: 60px;
+
+        &--active {
+            
+            .questions__card-text {
+                opacity: 1;
+            }
+
+            .questions__card-icon {
+                transform: rotate(90deg);
+
+                path {
+                    fill: $accent;
+                }
+            }
+        }
+
+    }
+
+    &__card-title {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 110%;
+    }
+
+    &__card-text-wrap {
+        @include column;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    &__card-text {
+        max-width: 434px;
+        opacity: 0;
+        padding-bottom: 40px;
+    }
+
+    &__card-icon {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        transition: all 0.2s ease-in-out;
+
+        path {
+            transition: all 0.2s ease-in-out;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,8 +1,4 @@
 .reviews {
-    max-width: calc($desktop-width - 5vw);
-    width: 100%;
-    margin: auto;
-    margin-left: 5vw;
     margin-top: $section-top-margin;
 
     &__heading {
@@ -20,6 +16,9 @@
 
     &-swiper {
         margin-top: 85px;
+        max-width: calc(1920px - 5vw);
+        width: 100%;
+        margin-left: 5vw;
     }
 
     &__slide {

@@ -1,6 +1,168 @@
-@media screen and (min-width: $desktop-width) {
+@media screen and (min-width: calc($desktop-width + 1px)) {
     .reviews {
         max-width: $container;
         margin: auto;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .promo {
+
+        &__heading-texts {
+            flex-direction: column;
+        }
+
+        &__heading-text {
+
+            &:first-child {
+                max-width: 100%;
+            }
+
+            &:last-child {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .promo {
+
+        &__statistic-cards {
+            gap: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .section-title {
+        font-size: 50px;
+    }
+
+    .promo {
+
+        &__heading {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        &__heading-info {
+            margin-top: 40px;
+            max-width: 100%;
+        }
+
+        &__heading-texts {
+            gap: 20px;
+        }
+
+        &__footer {
+            align-items: flex-end;
+        }
+
+        &__statistic-title {
+            font-size: 110px;
+        }
+
+        &__statistic-sub {
+            font-size: 50px;
+        }
+
+        &__statistic-text {
+            font-size: 16px;
+            line-height: 110%;
+        }
+        
+
+        &__top-works {
+            width: calc(417px / 1.5);
+            height: calc(193px / 1.5);
+        }
+
+        &__tg-link {
+            right: 70px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .advantages{
+
+        &__cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0;
+            width: 100%;
+        }
+
+        &__card {
+            &:nth-child(1), &:nth-child(2) {
+                max-width: calc(50% - (20px / 2));
+                width: 100%;
+            }
+
+            &:last-child {
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            &:last-child &-text {
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .advantages {
+
+        &__heading {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        &__heading-info {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .advantages{
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+
+        &__card {
+            min-height: 300px;
+
+            &:nth-child(1), &:nth-child(2) {
+                max-width: 100%;
+            }
+        }
+
+        &__card-content {
+            margin-top: 60px;
+        }
+
+        &__card-text {
+            max-width: 500px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .advantages{
+
+        &__card-icon {
+            width: 60px;
+            height: 60px;
+        }
     }
 }

@@ -1,0 +1,31 @@
+.footer {
+    @include flex-center-between;
+    margin-top: 180px;
+    margin-bottom: 79px;
+    padding-top: 40px;
+    border-top: 1px solid $gray;
+
+    &__content {
+        @include flex-start-between;
+        max-width: 1336px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    &__content-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info {
+        font-size: 16px;
+        line-height: 110%;
+        font-weight: 400;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $light
+    }
+
+}

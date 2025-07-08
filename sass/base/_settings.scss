@@ -91,4 +91,30 @@
   .accent {
     color: $accent;
   }
-  
+
+@keyframes blob {
+  0% {
+      transform: scale(1) rotate(0deg) skew(0deg, 0deg);
+      border-radius: 50%;
+  }
+  20% {
+      transform: scale(1.1, 0.9) rotate(20deg) skew(5deg, 2deg);
+      border-radius: 45% 55% 50% 50% / 55% 45% 50% 50%;
+  }
+  40% {
+      transform: scale(0.9, 1.1) rotate(60deg) skew(-5deg, -2deg);
+      border-radius: 50% 50% 45% 55% / 50% 50% 55% 45%;
+  }
+  60% {
+      transform: scale(1.05, 0.95) rotate(120deg) skew(3deg, 6deg);
+      border-radius: 55% 45% 50% 50% / 45% 55% 50% 50%;
+  }
+  80% {
+      transform: scale(0.95, 1.05) rotate(200deg) skew(-3deg, -6deg);
+      border-radius: 50% 50% 55% 45% / 50% 50% 45% 55%;
+  }
+  100% {
+      transform: scale(1) rotate(360deg) skew(0deg, 0deg);
+      border-radius: 50%;
+  }
+}
