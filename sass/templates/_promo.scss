@@ -29,6 +29,16 @@
     //     }
     // }
 
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 51px;
+        right: 53px;
+        width: 51px;
+        height: 51px;
+        background: url(../../img/light-star.svg) no-repeat center / cover;
+    }
+
     // Новый блоб-анимированный шар
     &__bg-blur {
         position: absolute;
