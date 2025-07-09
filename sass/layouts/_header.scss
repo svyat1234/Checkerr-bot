@@ -9,7 +9,7 @@
     border: 1px solid $gray;
 
     &__logo {
-        justify-self: start;
+      justify-self: start;
     }
     
     &__nav {
@@ -23,13 +23,49 @@
         text-decoration: none;
         color: $light;
     }
+
+    &__buttons {
+      justify-self: end;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
     
     &__search-button {
-      justify-self: end;
       width: 19px;
       height: 19px;
       background: url(../../img/search.svg) no-repeat center / cover;
       border: none;
       cursor: pointer;
     }
+
+    &__burger-button {
+      display: none;
+      width: 19px;
+      height: 16px;
+      background: url(../../img/burger-menu.svg) no-repeat center / cover;
+      border: none;
+      cursor: pointer;
+    }
+
+    
+  @media screen and (max-width: 1200px) {
+    @include flex-center-between;
+    gap: 20px;
+
+    &__nav {
+      gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    
+    &__burger-button {
+      display: block;
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
 }

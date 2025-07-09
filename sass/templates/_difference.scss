@@ -39,6 +39,7 @@
         border-radius: 35px;
         border: 1px solid rgba($light, 0.03);
         justify-content: space-between;
+        gap: 20px;
 
         &--start, &--end {
         align-self: stretch;

@@ -48,4 +48,7 @@ $section-top-margin: 250px;
   @media (max-width: 1300px) {
     max-width: 40vw;
   }
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
 }

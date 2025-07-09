@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Swiper для блока отзывов
     const reviewsSwiper = new Swiper('.reviews-swiper', {
         loop: true,
-        slidesPerView: 2.5,
+        slidesPerView: 1,
         spaceBetween: 30,
         pagination: {
             el: '.swiper-pagination',
@@ -70,6 +70,17 @@ document.addEventListener('DOMContentLoaded', () => {
             disableOnInteraction: false,
         },
         speed: 800,
+        breakpoints: {
+            1400: {
+                slidesPerView: 2.5
+            },
+            1200: {
+                slidesPerView: 2
+            },
+            768: {
+                slidesPerView: 1.5
+            },
+        },
     });
 
     // Функционал для аккордеона вопросов
