@@ -98,6 +98,7 @@
     }
 
     &__top-works {
+        margin-top: 5px;
         position: relative;
         width: 417px;
         height: 193px;
@@ -115,7 +116,7 @@
         border-radius: 50%;
         z-index: 2;
         right: 101px;
-        top: 5px;
+        top: 7px;
 
         &::before {
             position: absolute;

@@ -1,10 +1,23 @@
 .footer {
     @include flex-center-between;
+    position: relative;
     gap: 60px;
     margin-top: 180px;
-    margin-bottom: 79px;
+    padding-bottom: 79px;
     padding-top: 40px;
     border-top: 1px solid $gray;
+
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: -5vw;
+        width: 40vw;
+        height: 50vw;
+        z-index: -1;
+        background: url(../../img/footer-bg.png) no-repeat center / cover;
+    }
+
 
     &__content {
         @include flex-start-between;

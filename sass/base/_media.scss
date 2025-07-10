@@ -142,6 +142,16 @@
         gap: 20px;
     }
 
+    .promo {
+
+        &__statistic-cards {
+            max-width: 50%;
+            padding-right: 40px;
+        }
+
+    }
+    
+
     .advantages{
 
         &__cards {
@@ -187,7 +197,7 @@
         }
 
         &__card {
-            max-width: calc(50% - 20px);
+            max-width: calc(50% - 10px);
 
             &--end {
                 order: 2;
@@ -262,7 +272,7 @@
         }
 
         &__statistic-text {
-            max-width: 150px;
+            max-width: 170px;
         }
 
         &__top-works {

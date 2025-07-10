@@ -63,8 +63,33 @@
         position: sticky;
         top: 10vh;
         height: 100vh;
-        overflow: hidden;
-        border-radius: 20px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            right: 0;
+            top: -5vh;
+            width: 1170px;
+            height: 90vh;
+            background: url(../../img/service-bg.png) no-repeat center / cover;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: -25%;
+            right: -50%;
+            width: 50vw;
+            height: 50vw;
+            background: $accent;
+            filter: blur(100px);
+            border-radius: 50%;
+            opacity: 0.6;
+            z-index: -1;
+            pointer-events: none;
+            animation: blob 8s infinite linear;
+            opacity: 0.2;
+        }
     }
     
     .video-wrapper {
@@ -74,9 +99,7 @@
         width: auto;
         max-width: 425px;
         max-height: 875px;
-        border-radius: 40px;
         background: url(../../img/phone.png) no-repeat center / cover;
-        // margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -87,7 +110,7 @@
         position: absolute;
         width: calc(100% - 5px);
         height: calc(100% - 5px);
-        left: calc(50% + 3px);
+        left: calc(50% + 2px);
         top: 50%;
         transform: translate(-50%, -50%);
         object-fit: cover;
@@ -95,6 +118,7 @@
         transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1);
         border-radius: inherit;
         z-index: -1;
+        border-radius: 15%;
     }
     
     .video-item.active {
