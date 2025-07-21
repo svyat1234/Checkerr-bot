@@ -1,0 +1,103 @@
+.tariffs {
+
+    &__heading {
+        @include flex-start-between;
+    }
+
+    &__title-wrap {
+        @include column;
+    }
+
+    &__title {
+        max-width: 550px;
+    }
+
+    &__cards {
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 40px 40px 50px 40px;
+        border-radius: 35px;
+        border: 1px solid rgba($light, 0.15);
+        align-self: stretch;
+
+        &--primary {
+            border: none;
+            background: rgba($light, 0.1);
+        }
+    }
+
+    &__time {
+        color: $light;
+        font-size: 30px;
+        line-height: 100%;
+    }
+
+    &__old-price {
+        font-family: Geist, sans-serif;
+        color: #6A6A6A;
+        font-size: 25px;
+        text-decoration: line-through;
+        font-weight: 600px;
+    }
+
+    &__price-wrap {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    &__price-title {
+        font-size: 50px;
+        font-family: Geist, sans-serif;
+        line-height: 100%;
+        font-weight: bold;
+    }
+
+    &__price-sub {
+        font-size: 30px;
+        color: $accent;
+        font-weight: bold;
+    }
+
+    &__link {
+        margin-top: 20px;
+    }
+
+    &__list {
+        padding-left: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__item {
+        line-height: 120%;
+    }
+
+    &__offer {
+        display: inline-block;
+        margin-top: 20px;
+        color: #6A6A6A;
+    }
+
+    &__offer-link {
+        width: 100%;
+        color: #6A6A6A;
+        transition: color 0.05s ease-in-out;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+    
+}

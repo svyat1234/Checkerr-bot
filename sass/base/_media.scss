@@ -134,6 +134,7 @@
 @media screen and (max-width: 1024px) {
     .advantages__heading,
     .service__heading,
+    .tariffs__heading,
     .difference__heading,
     .reviews__heading,
     .questions__heading {
@@ -187,6 +188,13 @@
         
         &__link {
             margin-top: 40px;
+        }
+    }
+
+    .tariffs {
+
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -379,6 +387,13 @@
 
         &__card-title {
             max-width: 100%;
+        }
+    }
+
+    .tariffs {
+
+        &__cards {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 
