@@ -28,6 +28,24 @@
             }
         }
     }
+
+    .tariffs {
+
+        &__link {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .section-link__text {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .section-link__icon {
+            display: none;
+        }
+    }
 }
 
 @media screen and (max-width: 1600px) {
@@ -47,6 +65,29 @@
         &__slide-footer {
             margin-left: 100px;
             gap: 30px;
+        }
+    }
+
+    .tariffs {
+
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__price-title {
+            font-size: 50px;
+        }
+
+        &__price-sub {
+            font-size: 30px;
+        }
+
+        &__link {
+            width: auto;
+            
+            .section-link__icon {
+                display: flex;
+            }
         }
     }
 }
@@ -188,13 +229,6 @@
         
         &__link {
             margin-top: 40px;
-        }
-    }
-
-    .tariffs {
-
-        &__cards {
-            grid-template-columns: repeat(2, 1fr);
         }
     }
 

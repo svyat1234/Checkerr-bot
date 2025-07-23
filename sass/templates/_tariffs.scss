@@ -56,14 +56,16 @@
     }
 
     &__price-title {
-        font-size: 50px;
+        font-size: clamp(30px, 2.8vw, 50px);
+        // font-size: 50px;
         font-family: Geist, sans-serif;
         line-height: 100%;
         font-weight: bold;
     }
 
     &__price-sub {
-        font-size: 30px;
+        font-size: clamp(20px, 1.6vw, 30px);
+        // font-size: 30px;
         color: $accent;
         font-weight: bold;
     }

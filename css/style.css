@@ -806,13 +806,13 @@ body {
   gap: 10px;
 }
 .tariffs__price-title {
-  font-size: 50px;
+  font-size: clamp(30px, 2.8vw, 50px);
   font-family: Geist, sans-serif;
   line-height: 100%;
   font-weight: bold;
 }
 .tariffs__price-sub {
-  font-size: 30px;
+  font-size: clamp(20px, 1.6vw, 30px);
   color: #14CF93;
   font-weight: bold;
 }
@@ -1232,6 +1232,18 @@ body {
   .promo__heading-text:last-child {
     max-width: 100%;
   }
+  .tariffs__link {
+    max-width: 100%;
+    width: 100%;
+  }
+  .tariffs .section-link__text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .tariffs .section-link__icon {
+    display: none;
+  }
 }
 @media screen and (max-width: 1600px) {
   .difference__card--start, .difference__card--end {
@@ -1240,6 +1252,21 @@ body {
   .reviews__slide-footer {
     margin-left: 100px;
     gap: 30px;
+  }
+  .tariffs__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tariffs__price-title {
+    font-size: 50px;
+  }
+  .tariffs__price-sub {
+    font-size: 30px;
+  }
+  .tariffs__link {
+    width: auto;
+  }
+  .tariffs__link .section-link__icon {
+    display: flex;
   }
 }
 @media screen and (max-width: 1400px) {
@@ -1330,9 +1357,6 @@ body {
   }
   .service__link {
     margin-top: 40px;
-  }
-  .tariffs__cards {
-    grid-template-columns: repeat(2, 1fr);
   }
   .difference__cards {
     flex-wrap: wrap;
