@@ -41,12 +41,12 @@
         line-height: 100%;
     }
 
-    &__old-price {
+    &__full-price {
         font-family: Geist, sans-serif;
         color: #6A6A6A;
         font-size: 25px;
-        text-decoration: line-through;
-        font-weight: 600px;
+        font-weight: 500;
+        height: 32px;
     }
 
     &__price-wrap {
@@ -70,6 +70,12 @@
         font-weight: bold;
     }
 
+    &__price-info {
+        margin-top: -15px;
+        font-size: 20px;
+        height: 20px;
+    }
+
     &__link {
         margin-top: 20px;
     }
@@ -86,9 +92,14 @@
         line-height: 120%;
     }
 
-    &__offer {
-        display: inline-block;
+    &__desc-wrap {
         margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__desc {
+        display: inline-block;
         color: #6A6A6A;
     }
 

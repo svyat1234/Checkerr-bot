@@ -793,12 +793,12 @@ body {
   font-size: 30px;
   line-height: 100%;
 }
-.tariffs__old-price {
+.tariffs__full-price {
   font-family: Geist, sans-serif;
   color: #6A6A6A;
   font-size: 25px;
-  text-decoration: line-through;
-  font-weight: 600px;
+  font-weight: 500;
+  height: 32px;
 }
 .tariffs__price-wrap {
   display: flex;
@@ -816,6 +816,11 @@ body {
   color: #14CF93;
   font-weight: bold;
 }
+.tariffs__price-info {
+  margin-top: -15px;
+  font-size: 20px;
+  height: 20px;
+}
 .tariffs__link {
   margin-top: 20px;
 }
@@ -829,9 +834,13 @@ body {
 .tariffs__item {
   line-height: 120%;
 }
-.tariffs__offer {
-  display: inline-block;
+.tariffs__desc-wrap {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.tariffs__desc {
+  display: inline-block;
   color: #6A6A6A;
 }
 .tariffs__offer-link {
