@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+    <script src="./js/gsap.js"></script>
     <script src="./js/main.js" type="module"></script>
 </head>
 <body>
@@ -74,24 +75,67 @@
                 </div>
 
                 <div class="promo__statistic-cards">
-                    <div class="promo__statistic-card">
-                        <div class="promo__statistic-title-wrap">
-                            <span class="promo__statistic-title">70</span>
-                            <span class="promo__statistic-sub">%</span>
+                    
+                    <div class="statistic-card">
+                        <div class="statistic-card__circle">
+                            <svg width="260" height="260" viewBox="0 0 266 266" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <foreignObject x="-6.68074" y="-6.68074" width="279.315" height="279.315"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(3.34px);clip-path:url(#bgblur_0_473_448_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="6.68074">
+                                <mask id="path-1-outside-1_473_448" maskUnits="userSpaceOnUse" x="-0.574434" y="-0.572185" width="267.096" height="267.097" fill="black">
+                                <rect fill="white" x="-0.574434" y="-0.572185" width="267.096" height="267.097"/>
+                                <path d="M133.519 0.977193C206.42 1.27833 265.274 60.6204 264.973 133.521C264.672 206.422 205.33 265.276 132.429 264.975C59.5276 264.674 0.673793 205.332 0.974912 132.431C1.27603 59.5299 60.618 0.676057 133.519 0.977193ZM132.651 211.115C175.806 211.293 210.934 176.454 211.113 133.299C211.291 90.144 176.451 55.0155 133.297 54.8372C90.1417 54.659 55.0132 89.4984 54.8349 132.653C54.6567 175.808 89.4961 210.937 132.651 211.115Z"/>
+                                </mask>
+                                <path d="M133.519 0.977193C206.42 1.27833 265.274 60.6204 264.973 133.521C264.672 206.422 205.33 265.276 132.429 264.975C59.5276 264.674 0.673793 205.332 0.974912 132.431C1.27603 59.5299 60.618 0.676057 133.519 0.977193ZM132.651 211.115C175.806 211.293 210.934 176.454 211.113 133.299C211.291 90.144 176.451 55.0155 133.297 54.8372C90.1417 54.659 55.0132 89.4984 54.8349 132.653C54.6567 175.808 89.4961 210.937 132.651 211.115Z" fill="white" fill-opacity="0.27" style="mix-blend-mode:overlay"/>
+                                <path d="M133.519 0.977193C206.42 1.27833 265.274 60.6204 264.973 133.521C264.672 206.422 205.33 265.276 132.429 264.975C59.5276 264.674 0.673793 205.332 0.974912 132.431C1.27603 59.5299 60.618 0.676057 133.519 0.977193ZM132.651 211.115C175.806 211.293 210.934 176.454 211.113 133.299C211.291 90.144 176.451 55.0155 133.297 54.8372C90.1417 54.659 55.0132 89.4984 54.8349 132.653C54.6567 175.808 89.4961 210.937 132.651 211.115Z" stroke="url(#paint0_linear_473_448)" stroke-opacity="0.11" stroke-width="1.95366" mask="url(#path-1-outside-1_473_448)"/>
+                                </g>
+                                <mask id="path-2-inside-2_473_448" fill="white">
+                                <path d="M133.465 27.8217C133.522 14.2111 122.437 2.89485 109.061 5.41036C87.9496 9.38038 68.0209 18.5588 51.1605 32.2796C27.8852 51.2208 11.8975 77.6465 5.92161 107.054C-0.0542812 136.461 4.35135 167.031 18.3878 193.555C32.4243 220.078 55.2232 240.914 82.8998 252.512C110.576 264.11 141.418 265.753 170.17 257.161C198.923 248.569 223.806 230.273 240.581 205.391C257.355 180.508 264.984 150.58 262.166 120.704C260.124 99.062 252.693 78.4181 240.72 60.5836C233.133 49.2833 217.292 49.3162 207.628 58.9006C197.965 68.485 198.332 84.0138 204.554 96.119C209.201 105.159 212.126 115.064 213.095 125.332C214.842 143.855 210.112 162.411 199.712 177.838C189.312 193.265 173.884 204.608 156.058 209.936C138.231 215.263 119.109 214.244 101.95 207.053C84.7903 199.863 70.655 186.944 61.9524 170.5C53.2497 154.055 50.5182 135.102 54.2233 116.869C57.9284 98.6367 67.8407 82.2528 82.2714 70.5093C90.2707 63.9995 99.384 59.1389 109.087 56.1125C122.081 52.0599 133.409 41.4323 133.465 27.8217Z"/>
+                                </mask>
+                                <!-- Простой круг для анимации -->
+                                <circle class="progress-path" id="progress-70" cx="133" cy="133" r="105" stroke="#14CF93" stroke-width="49" fill="none" stroke-linecap="round" transform="rotate(-90 133 133)"/>
+                                <defs>
+                                <clipPath id="bgblur_0_473_448_clip_path" transform="translate(6.68074 6.68074)"><path d="M133.519 0.977193C206.42 1.27833 265.274 60.6204 264.973 133.521C264.672 206.422 205.33 265.276 132.429 264.975C59.5276 264.674 0.673793 205.332 0.974912 132.431C1.27603 59.5299 60.618 0.676057 133.519 0.977193ZM132.651 211.115C175.806 211.293 210.934 176.454 211.113 133.299C211.291 90.144 176.451 55.0155 133.297 54.8372C90.1417 54.659 55.0132 89.4984 54.8349 132.653C54.6567 175.808 89.4961 210.937 132.651 211.115Z"/>
+                                </clipPath><linearGradient id="paint0_linear_473_448" x1="0.974912" y1="132.431" x2="264.973" y2="133.521" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="1" stop-color="#999999"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>                                
+                            <div class="statistic-card__percentage">70</div>
                         </div>
-                        <!-- ./promo__statistic-card -->
-                        <span class="promo__statistic-text main-text">меньше времени на поиск клиентов</span>
+
+                        <span class="statistic-card__label">меньше времени на анализ сайта</span>
                     </div>
-                    <!-- /.promo__statistic-card -->
-                    <div class="promo__statistic-card">
-                        <div class="promo__statistic-title-wrap">
-                            <span class="promo__statistic-title">3</span>
-                            <span class="promo__statistic-sub">/4</span>
+
+                    <div class="statistic-card">
+                        <div class="statistic-card__circle">
+                            <svg width="260" height="260" viewBox="0 0 266 266" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <foreignObject x="-6.68074" y="-6.68074" width="279.315" height="279.315"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(3.34px);clip-path:url(#bgblur_0_473_449_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="6.68074">
+                                <mask id="path-1-outside-1_473_449" maskUnits="userSpaceOnUse" x="-0.574434" y="-0.572185" width="267.096" height="267.097" fill="black">
+                                <rect fill="white" x="-0.574434" y="-0.572185" width="267.096" height="267.097"/>
+                                <path d="M133.519 0.977193C206.42 1.27833 265.274 60.6204 264.973 133.521C264.672 206.422 205.33 265.276 132.429 264.975C59.5276 264.674 0.673793 205.332 0.974912 132.431C1.27603 59.5299 60.618 0.676057 133.519 0.977193ZM132.651 211.115C175.806 211.293 210.934 176.454 211.113 133.299C211.291 90.144 176.451 55.0155 133.297 54.8372C90.1417 54.659 55.0132 89.4984 54.8349 132.653C54.6567 175.808 89.4961 210.937 132.651 211.115Z"/>
+                                </mask>
+                                <path d="M133.519 0.977193C206.42 1.27833 265.274 60.6204 264.973 133.521C264.672 206.422 205.33 265.276 132.429 264.975C59.5276 264.674 0.673793 205.332 0.974912 132.431C1.27603 59.5299 60.618 0.676057 133.519 0.977193ZM132.651 211.115C175.806 211.293 210.934 176.454 211.113 133.299C211.291 90.144 176.451 55.0155 133.297 54.8372C90.1417 54.659 55.0132 89.4984 54.8349 132.653C54.6567 175.808 89.4961 210.937 132.651 211.115Z" fill="white" fill-opacity="0.27" style="mix-blend-mode:overlay"/>
+                                <path d="M133.519 0.977193C206.42 1.27833 265.274 60.6204 264.973 133.521C264.672 206.422 205.33 265.276 132.429 264.975C59.5276 264.674 0.673793 205.332 0.974912 132.431C1.27603 59.5299 60.618 0.676057 133.519 0.977193ZM132.651 211.115C175.806 211.293 210.934 176.454 211.113 133.299C211.291 90.144 176.451 55.0155 133.297 54.8372C90.1417 54.659 55.0132 89.4984 54.8349 132.653C54.6567 175.808 89.4961 210.937 132.651 211.115Z" stroke="url(#paint0_linear_473_449)" stroke-opacity="0.11" stroke-width="1.95366" mask="url(#path-1-outside-1_473_449)"/>
+                                </g>
+                                <mask id="path-2-inside-2_473_449" fill="white">
+                                <path d="M133.465 27.8217C133.522 14.2111 122.437 2.89485 109.061 5.41036C87.9496 9.38038 68.0209 18.5588 51.1605 32.2796C27.8852 51.2208 11.8975 77.6465 5.92161 107.054C-0.0542812 136.461 4.35135 167.031 18.3878 193.555C32.4243 220.078 55.2232 240.914 82.8998 252.512C110.576 264.11 141.418 265.753 170.17 257.161C198.923 248.569 223.806 230.273 240.581 205.391C257.355 180.508 264.984 150.58 262.166 120.704C260.124 99.062 252.693 78.4181 240.72 60.5836C233.133 49.2833 217.292 49.3162 207.628 58.9006C197.965 68.485 198.332 84.0138 204.554 96.119C209.201 105.159 212.126 115.064 213.095 125.332C214.842 143.855 210.112 162.411 199.712 177.838C189.312 193.265 173.884 204.608 156.058 209.936C138.231 215.263 119.109 214.244 101.95 207.053C84.7903 199.863 70.655 186.944 61.9524 170.5C53.2497 154.055 50.5182 135.102 54.2233 116.869C57.9284 98.6367 67.8407 82.2528 82.2714 70.5093C90.2707 63.9995 99.384 59.1389 109.087 56.1125C122.081 52.0599 133.409 41.4323 133.465 27.8217Z"/>
+                                </mask>
+                                <!-- Простой круг для анимации -->
+                                <circle class="progress-path" id="progress-99" cx="133" cy="133" r="105" stroke="#14CF93" stroke-width="49" fill="none" stroke-linecap="round" transform="rotate(-90 133 133)"/>
+                                <defs>
+                                <clipPath id="bgblur_0_473_449_clip_path" transform="translate(6.68074 6.68074)"><path d="M133.519 0.977193C206.42 1.27833 265.274 60.6204 264.973 133.521C264.672 206.422 205.33 265.276 132.429 264.975C59.5276 264.674 0.673793 205.332 0.974912 132.431C1.27603 59.5299 60.618 0.676057 133.519 0.977193ZM132.651 211.115C175.806 211.293 210.934 176.454 211.113 133.299C211.291 90.144 176.451 55.0155 133.297 54.8372C90.1417 54.659 55.0132 89.4984 54.8349 132.653C54.6567 175.808 89.4961 210.937 132.651 211.115Z"/>
+                                </clipPath><linearGradient id="paint0_linear_473_449" x1="0.974912" y1="132.431" x2="264.973" y2="133.521" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="1" stop-color="#999999"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="statistic-card__percentage">99</div>
                         </div>
-                        <!-- ./promo__statistic-card -->
-                        <span class="promo__statistic-text main-text">находят проект в первые 48 часов</span>
+
+                        <span class="statistic-card__label">точность обнаружения ошибок</span>
                     </div>
-                    <!-- /.promo__statistic-card -->
+
                 </div>
                 <!-- /.promo__statistic-cards -->
 
@@ -100,58 +144,7 @@
         </section>
         <!-- /.promo -->
 
-
-        <!-- ADVANTAGES -->
-
-        <section class="advantages container" id="advantages">
-            <div class="advantages__heading">
-                <h2 class="advantages__title section-title">Наши <span class="accent">ПРЕИМУЩЕСТВА</span></h2>
-                <div class="advantages__heading-info main-text">
-                    <p class="advantages__heading-info-text">Получайте отборные проекты прямо в Telegram, пока другие тратят время на ручной поиск.</p>
-                </div>
-            </div>
-            <!-- /.advantages__heading -->
-
-            <div class="advantages__cards">
-                <div class="advantages__card">
-                    <div class="advantages__card-icon"></div>
-
-                    <div class="advantages__card-content">
-                        <span class="advantages__card-title">Это удобно</span>
-                        <span class="advantages__card-text main-text">Выбирайте нужную категорию и получайте заказы прямо в телеграмм</span>
-                    </div>
-                    <!-- /.advantages__card-content -->
-                </div>
-                <!-- /.advantages__card -->
-
-                <div class="advantages__card">
-                    <div class="advantages__card-icon"></div>
-
-                    <div class="advantages__card-content">
-                        <span class="advantages__card-title">Клиенты со всех площадок</span>
-                        <span class="advantages__card-text main-text">Тебе остается только написать и&nbsp;договориться</span>
-                    </div>
-                    <!-- /.advantages__card-content -->
-                </div>
-                <!-- /.advantages__card -->
-
-                <div class="advantages__card">
-                    <div class="advantages__card-icon"></div>
-
-                    <div class="advantages__card-content">
-                        <span class="advantages__card-title">Зарабатывай сколько хочешь</span>
-                        <span class="advantages__card-text main-text">Не ограничиваем клиентов, ты сам выбираешь сколько хочешь зарабатывать</span>
-                    </div>
-                    <!-- /.advantages__card-content -->
-                </div>
-                <!-- /.advantages__card -->
-
-            </div>
-            <!-- /.advantages__cards -->
-        </section>
-        <!-- /.advantages -->
-
-
+        
         <!-- SERVICE -->
          
         <section class="service section container" id="service">
@@ -278,24 +271,21 @@
             <div class="tariffs__heading">
                 <span class="tariffs__sub section-sub">тарифы</span>
                 <div class="tariffs__title-wrap">
-                    <h2 class="tariffs__title section-title">Преимущества <span class="accent">подписки</span></h2>
+                    <h2 class="tariffs__title section-title">Тарифы и <span class="accent">условия</span></h2>
+                    <p class="tariffs__title-sub main-text">Чат-бот «TopWorks» — сервис для специалистов, фрилансеров и компаний по поиску заказов или исполнителей в IT сегменте</p>
                 </div>
                 <!-- /.difference__title-wrap -->
             </div>
             <!-- /.tariffs__heading -->
             <div class="tariffs__cards">
                 <div class="tariffs__card">
-                    <span class="tariffs__time">3 дня</span>
-                    <span class="tariffs__full-price"></span>
+                    <span class="tariffs__time">пробный</span>
                     <div class="tariffs__price-wrap">
-                        <span class="tariffs__price-title">Бесплатно</span>
+                        <span class="tariffs__price-title">FREE</span>
+                        <span class="tariffs__price-sub">/мес</span>
                     </div>
                     <!-- /.tariffs__price-wrap -->
-                    <span class="tariffs__price-info">Премиум подписка</span>
-                    <a href="./instructions.html" class="tariffs__link section-link">
-                        <span class="section-link__text">Попробовать</span>
-                        <span class="section-link__icon"></span>
-                    </a>
+                    <span class="tariffs__price-info">(тестовый период 7 дней)</span>
                     <ul class="tariffs__list">
                         <li class="tariffs__item main-text">Добавление своих минус слов для фильтрации</li>
                         <li class="tariffs__item main-text">Перенос подписки на другой аккаунт</li>
@@ -305,46 +295,21 @@
                         <li class="tariffs__item main-text">Оперативная техподдержка</li>
                     </ul>
                     <!-- /.tariffs__list -->
-                </div>
-                <!-- /.tariffs__card -->
-
-                <div class="tariffs__card">
-                    <span class="tariffs__time">1 месяц</span>
-                    <span class="tariffs__full-price"></span>
-                    <div class="tariffs__price-wrap">
-                        <span class="tariffs__price-title">500 ₽</span>
-                    </div>
-                    <!-- /.tariffs__price-wrap -->
-                    <span class="tariffs__price-info"></span>
                     <a href="./instructions.html" class="tariffs__link section-link">
                         <span class="section-link__text">Попробовать</span>
                         <span class="section-link__icon"></span>
                     </a>
-                    <ul class="tariffs__list">
-                        <li class="tariffs__item main-text">Добавление своих минус слов для фильтрации</li>
-                        <li class="tariffs__item main-text">Перенос подписки на другой аккаунт</li>
-                        <li class="tariffs__item main-text">Приостановка подписки на паузу</li>
-                        <li class="tariffs__item main-text">Ручная постмодерация</li>
-                        <li class="tariffs__item main-text">Возможность добавления своих чатов</li>
-                        <li class="tariffs__item main-text">Оперативная техподдержка</li>
-                    </ul>
-                    <!-- /.tariffs__list -->
                 </div>
                 <!-- /.tariffs__card -->
-
+        
                 <div class="tariffs__card">
-                    <span class="tariffs__time">6 месяцев</span>
-                    <span class="tariffs__full-price">2 700 ₽</span>
+                    <span class="tariffs__time">базовый отчёт</span>
                     <div class="tariffs__price-wrap">
                         <span class="tariffs__price-title">450 ₽</span>
                         <span class="tariffs__price-sub">/мес</span>
                     </div>
                     <!-- /.tariffs__price-wrap -->
-                    <span class="tariffs__price-info">Скидка 10%</span>
-                    <a href="./instructions.html" class="tariffs__link section-link">
-                        <span class="section-link__text">Попробовать</span>
-                        <span class="section-link__icon"></span>
-                    </a>
+                    <span class="tariffs__price-info">(ежемесячная подписка)</span>
                     <ul class="tariffs__list">
                         <li class="tariffs__item main-text">Добавление своих минус слов для фильтрации</li>
                         <li class="tariffs__item main-text">Перенос подписки на другой аккаунт</li>
@@ -354,22 +319,21 @@
                         <li class="tariffs__item main-text">Оперативная техподдержка</li>
                     </ul>
                     <!-- /.tariffs__list -->
+                    <a href="./instructions.html" class="tariffs__link section-link">
+                        <span class="section-link__text">Попробовать</span>
+                        <span class="section-link__icon"></span>
+                    </a>
                 </div>
                 <!-- /.tariffs__card -->
-
-                <div class="tariffs__card tariffs__card--primary">
-                    <span class="tariffs__time">12 месяцев</span>
-                    <span class="tariffs__full-price">4 800 ₽</span>
+        
+                <div class="tariffs__card">
+                    <span class="tariffs__time">расширенный отчёт</span>
                     <div class="tariffs__price-wrap">
                         <span class="tariffs__price-title">400 ₽</span>
                         <span class="tariffs__price-sub">/мес</span>
                     </div>
                     <!-- /.tariffs__price-wrap -->
-                    <span class="tariffs__price-info">Скидка 20%</span>
-                    <a href="./instructions.html" class="tariffs__link section-link">
-                        <span class="section-link__text">Попробовать</span>
-                        <span class="section-link__icon"></span>
-                    </a>
+                    <span class="tariffs__price-info">(ежемесячная подписка)</span>
                     <ul class="tariffs__list">
                         <li class="tariffs__item main-text">Добавление своих минус слов для фильтрации</li>
                         <li class="tariffs__item main-text">Перенос подписки на другой аккаунт</li>
@@ -379,17 +343,74 @@
                         <li class="tariffs__item main-text">Оперативная техподдержка</li>
                     </ul>
                     <!-- /.tariffs__list -->
+                    <a href="./instructions.html" class="tariffs__link section-link">
+                        <span class="section-link__text">Попробовать</span>
+                        <span class="section-link__icon"></span>
+                    </a>
                 </div>
                 <!-- /.tariffs__card -->
             </div>
             <!-- /.tariffs__cards -->
+
             <div class="tariffs__desc-wrap">
-                <span class="tariffs__desc">* Цена подписки TopWorks bot актуальна на момент её подключения. Подключая один из тарифов вы соглашаетесь с&nbsp;<a href="#" class="tariffs__offer-link">публичной офертой.</a></span>
-                <span class="tariffs__desc">Cтоимость размещения одного задания 50₽.</span>
+                <span class="tariffs__desc">* Цена подписки Checkerr bot актуальна на момент её подключения. Подключая один из тарифов вы соглашаетесь с&nbsp;<a href="#" class="tariffs__offer-link">публичной офертой.</a></span>
+                <!-- <span class="tariffs__desc">Cтоимость размещения одного задания 50₽.</span> -->
             </div>
             <!-- /.tariffs__desc-wrap -->
         </section>
         <!-- /.tariffs -->
+
+
+        <!-- ADVANTAGES -->
+
+        <section class="advantages container" id="advantages">
+            <div class="advantages__heading">
+                <h2 class="advantages__title section-title">Наши <span class="accent">ПРЕИМУЩЕСТВА</span></h2>
+                <div class="advantages__heading-info main-text">
+                    <p class="advantages__heading-info-text">Получайте отборные проекты прямо в Telegram, пока другие тратят время на ручной поиск.</p>
+                </div>
+            </div>
+            <!-- /.advantages__heading -->
+
+            <div class="advantages__cards">
+                <div class="advantages__card">
+                    <div class="advantages__card-icon"></div>
+
+                    <div class="advantages__card-content">
+                        <span class="advantages__card-title">Это удобно</span>
+                        <span class="advantages__card-text main-text">Выбирайте нужную категорию и получайте заказы прямо в телеграмм</span>
+                    </div>
+                    <!-- /.advantages__card-content -->
+                </div>
+                <!-- /.advantages__card -->
+
+                <div class="advantages__card">
+                    <div class="advantages__card-icon"></div>
+
+                    <div class="advantages__card-content">
+                        <span class="advantages__card-title">Клиенты со всех площадок</span>
+                        <span class="advantages__card-text main-text">Тебе остается только написать и&nbsp;договориться</span>
+                    </div>
+                    <!-- /.advantages__card-content -->
+                </div>
+                <!-- /.advantages__card -->
+
+                <div class="advantages__card">
+                    <div class="advantages__card-icon"></div>
+
+                    <div class="advantages__card-content">
+                        <span class="advantages__card-title">Зарабатывай сколько хочешь</span>
+                        <span class="advantages__card-text main-text">Не ограничиваем клиентов, ты сам выбираешь сколько хочешь зарабатывать</span>
+                    </div>
+                    <!-- /.advantages__card-content -->
+                </div>
+                <!-- /.advantages__card -->
+
+            </div>
+            <!-- /.advantages__cards -->
+        </section>
+        <!-- /.advantages -->
+
         
         <!-- DIFFERENCE -->
 

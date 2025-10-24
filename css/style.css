@@ -357,6 +357,8 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 90px;
+  min-width: 0;
+  overflow: hidden;
 }
 .promo__top-works {
   margin-top: 5px;
@@ -395,6 +397,8 @@ body {
   max-width: 860px;
   width: 100%;
   gap: 100px;
+  min-width: 300px;
+  flex-shrink: 0;
 }
 @media (max-width: 1800px) {
   .promo__statistic-cards {
@@ -416,33 +420,61 @@ body {
     max-width: 100%;
   }
 }
-.promo__statistic-card {
+
+.statistic-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 25px;
+  min-width: 260px;
+  flex-shrink: 0;
 }
-.promo__statistic-title-wrap {
+.statistic-card__circle {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.statistic-card__percentage {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
   font-family: Geist, sans-serif;
-  display: flex;
-  align-items: flex-start;
-}
-.promo__statistic-title {
-  font-size: 148px;
+  font-size: 70px;
   font-weight: bold;
-  line-height: 100%;
-  display: flex;
-  align-items: flex-start;
-  width: -moz-fit-content;
-  width: fit-content;
+  color: white;
+  line-height: 1;
+  z-index: 2;
 }
-.promo__statistic-sub {
-  font-size: 58px;
+.statistic-card__percentage::after {
+  position: absolute;
+  content: "%";
+  top: 5px;
+  font-size: 26px;
   color: #14CF93;
   font-weight: 800;
-  letter-spacing: -5px;
 }
-.promo__statistic-text {
+.statistic-card__label {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  line-height: 1.4;
   max-width: 250px;
+}
+.statistic-card svg {
+  width: 260px;
+  height: 260px;
+  display: block;
+  flex-shrink: 0;
+}
+.statistic-card svg .progress-path {
+  stroke: #14CF93;
+  stroke-linejoin: round;
+  fill: none;
 }
 
 .advantages {
@@ -744,6 +776,8 @@ body {
   align-items: flex-start;
   max-width: 860px;
   width: 100%;
+  flex-direction: column;
+  gap: 16px;
 }
 @media (max-width: 1800px) {
   .tariffs__title-wrap {
@@ -768,39 +802,53 @@ body {
 .tariffs__title {
   max-width: 550px;
 }
+.tariffs__title-sub {
+  max-width: 686px;
+}
 .tariffs__cards {
   margin-top: 70px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .tariffs__card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 40px 40px 50px 40px;
   border-radius: 35px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   align-self: stretch;
+  overflow: hidden;
+  padding-bottom: 50px;
 }
-.tariffs__card--primary {
-  border: none;
-  background: rgba(255, 255, 255, 0.1);
+.tariffs__card:hover .tariffs__time::before {
+  opacity: 1;
 }
 .tariffs__time {
+  text-align: center;
   color: #fff;
   font-size: 30px;
-  line-height: 100%;
+  line-height: 120%;
+  padding-block: 28px;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  position: relative;
 }
-.tariffs__full-price {
-  font-family: Geist, sans-serif;
-  color: #6A6A6A;
-  font-size: 25px;
-  font-weight: 500;
-  height: 32px;
+.tariffs__time::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(66deg, #14CF93 0%, #0A694B 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
 }
 .tariffs__price-wrap {
+  margin-top: 75px;
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -817,19 +865,35 @@ body {
   font-weight: bold;
 }
 .tariffs__price-info {
-  margin-top: -15px;
+  margin-top: 6px;
   font-size: 20px;
-  height: 20px;
-}
-.tariffs__link {
-  margin-top: 20px;
+  opacity: 0.3;
 }
 .tariffs__list {
-  padding-left: 20px;
+  padding: 0px 51px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  list-style: none;
+}
+.tariffs__link {
+  padding: 0px 51px;
+  width: 100%;
+  margin-top: 65px;
+}
+.tariffs__link .section-link__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-color: #757575;
+  color: #757575;
+  transition: all 0.2s ease;
+}
+.tariffs__link .section-link__text:hover {
+  color: #fff;
+  border-color: #fff;
 }
 .tariffs__item {
   line-height: 120%;

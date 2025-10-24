@@ -6,28 +6,6 @@
     padding: 50px 0px 50px 60px;
     background: url(../../img/promo-bg-grid.png) no-repeat center / cover;
     overflow: hidden;
-    
-    // &__bg-blur{
-    //     position: absolute;
-    //     left: 320px;
-    //     bottom: 0;
-    //     width: 949px;
-    //     height: 593px;
-    //     background: url(../../img/promo-bg-animated.svg) no-repeat center / cover;
-    //     pointer-events: none;
-    //     animation: blob-animate 8s infinite linear;
-
-    //     &::before {
-    //         position: absolute;
-    //         content: '';
-    //         left: 0;
-    //         bottom: 0;
-    //         width: 100%;
-    //         height: 100%;
-    //         mix-blend-mode: hue;
-    //         background-color: #43dca6;
-    //     }
-    // }
 
     &::after {
         position: absolute;
@@ -95,6 +73,8 @@
     &__footer {
         @include flex-start-between;
         margin-top: 90px;
+        min-width: 0; // Предотвращаем переполнение
+        overflow: hidden; // Скрываем переполнение
     }
 
     &__top-works {
@@ -133,38 +113,76 @@
     &__statistic-cards {
         @include column;
         gap: 100px;
+        min-width: 300px; // Минимальная ширина для предотвращения съезжания
+        flex-shrink: 0; // Предотвращаем сжатие
     }
+}
 
-    &__statistic-card {
+// Статистические карточки с кругами прогресса
+.statistic-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    min-width: 260px; // Фиксированная минимальная ширина
+    flex-shrink: 0; // Предотвращаем сжатие
+
+    &__circle {
+        position: relative;
+        width: 260px;
+        height: 260px;
         display: flex;
-        flex-direction: column;
-        gap: 25px;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0; // Предотвращаем сжатие
     }
 
-    &__statistic-title-wrap {
+    &__percentage {
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-50%, -50%);
         font-family: Geist, sans-serif;
-        display: flex;
-        align-items: flex-start;
-    }
-
-    &__statistic-title {
-        font-size: 148px;
+        font-size: 70px;
         font-weight: bold;
-        line-height: 100%;
-        display: flex;
-        align-items: flex-start;
-        width: fit-content;
+        color: white;
+        line-height: 1;
+        z-index: 2;
+        
+        // Стилизация символа %
+        &::after {
+            position: absolute;
+            content: '%';
+            top: 5px;
+            font-size: 26px;
+            color: #14CF93;
+            font-weight: 800;
+            // margin-left: 5px;
+        }
     }
 
-    &__statistic-sub {
-        font-size: 58px;
-        color: $accent;
-        font-weight: 800;
-        letter-spacing: -5px;
-    }
-
-    &__statistic-text {
+    &__label {
+        font-size: 18px;
+        color: white;
+        text-align: center;
+        line-height: 1.4;
         max-width: 250px;
+    }
+
+    // SVG стили
+    svg {
+        width: 260px;
+        height: 260px;
+        display: block;
+        flex-shrink: 0; // Предотвращаем сжатие
+        
+        // Анимируемый путь прогресса
+        .progress-path {
+            stroke: #14CF93;
+            stroke-linejoin: round;
+            fill: none;
+            // stroke-width устанавливается в HTML атрибутах, не перезаписываем!
+        }
     }
 
 }
