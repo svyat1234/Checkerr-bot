@@ -273,7 +273,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
   margin-top: 20px;
   padding: 50px 0px 50px 60px;
-  background: url(../../img/promo-bg-grid.png) no-repeat center/cover;
+  background: url(../img/promo-bg-grid.png) no-repeat center/cover;
   overflow: hidden;
 }
 .promo::after {
@@ -283,7 +283,7 @@ body {
   right: 53px;
   width: 51px;
   height: 51px;
-  background: url(../../img/light-star.svg) no-repeat center/cover;
+  background: url(../img/light-star.svg) no-repeat center/cover;
 }
 .promo__bg-blur {
   position: absolute;
@@ -365,7 +365,7 @@ body {
   position: relative;
   width: 417px;
   height: 193px;
-  background: url(../../img/top-woks.svg) no-repeat center/cover;
+  background: url(../img/top-woks.svg) no-repeat center/cover;
 }
 .promo__tg-link {
   position: absolute;
@@ -373,7 +373,7 @@ body {
   height: 48px;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  background: rgba(255, 255, 255, 0.01) url(../../img/tg.svg) no-repeat center;
+  background: rgba(255, 255, 255, 0.01) url(../img/tg.svg) no-repeat center;
   border: 1px solid rgba(255, 255, 255, 0.11);
   border-radius: 50%;
   z-index: 2;
@@ -385,7 +385,7 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background: url(../../img/tg.svg) no-repeat center;
+  background: url(../img/tg.svg) no-repeat center;
   z-index: 1;
   filter: blur(6px);
   opacity: 0.7;
@@ -531,13 +531,13 @@ body {
   min-height: 414px;
 }
 .advantages__card:nth-child(1) .advantages__card-icon {
-  background: url(../../img/adv-1.svg) no-repeat center/cover;
+  background: url(../img/adv-1.svg) no-repeat center/cover;
 }
 .advantages__card:nth-child(2) .advantages__card-icon {
-  background: url(../../img/adv-2.svg) no-repeat center/cover;
+  background: url(../img/adv-2.svg) no-repeat center/cover;
 }
 .advantages__card:nth-child(3) .advantages__card-icon {
-  background: url(../../img/adv-3.svg) no-repeat center/cover;
+  background: url(../img/adv-3.svg) no-repeat center/cover;
 }
 .advantages__card-icon {
   width: 87px;
@@ -669,7 +669,7 @@ body {
   top: -5vh;
   width: 1170px;
   height: 90vh;
-  background: url(../../img/service-bg.png) no-repeat center/cover;
+  background: url(../img/service-bg.png) no-repeat center/cover;
 }
 .service .video-container::after {
   position: absolute;
@@ -694,7 +694,7 @@ body {
   width: auto;
   max-width: 425px;
   max-height: 875px;
-  background: url(../../img/phone.png) no-repeat center/cover;
+  background: url(../img/phone.png) no-repeat center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -907,7 +907,7 @@ body {
   left: 0;
   width: 13px;
   height: 13px;
-  background: url(../../img/tariffs-item-star.svg) no-repeat center/cover;
+  background: url(../img/tariffs-item-star.svg) no-repeat center/cover;
 }
 .tariffs__desc-wrap {
   margin-top: 20px;
@@ -1084,7 +1084,7 @@ body {
   right: -1px;
   width: 237px;
   height: 114px;
-  background: url(../../img/corner2.svg) no-repeat center/cover;
+  background: url(../img/corner2.svg) no-repeat center/cover;
 }
 .reviews__slide::after {
   position: absolute;
@@ -1093,12 +1093,12 @@ body {
   left: -2px;
   width: 155px;
   height: 156px;
-  background: url(../../img/corner1.svg) no-repeat center/cover;
+  background: url(../img/corner1.svg) no-repeat center/cover;
 }
 .reviews__slide-icon {
   width: 59px;
   height: 48px;
-  background: url(../../img/reviews-icon.svg) no-repeat center/cover;
+  background: url(../img/reviews-icon.svg) no-repeat center/cover;
 }
 .reviews__slide-stars {
   position: absolute;
@@ -1112,10 +1112,10 @@ body {
   height: 24px;
 }
 .reviews__slide-star--light {
-  background: url(../../img/star-light.svg);
+  background: url(../img/star-light.svg);
 }
 .reviews__slide-star--dark {
-  background: url(../../img/star-dark.svg);
+  background: url(../img/star-dark.svg);
 }
 .reviews__slide-text {
   margin-top: 67px;
@@ -1212,7 +1212,7 @@ body {
   top: 50%;
   left: -68px;
   transform: translateY(-50%);
-  background: url(../../img/accent-star.svg) no-repeat center/cover;
+  background: url(../img/accent-star.svg) no-repeat center/cover;
 }
 .questions__cards {
   margin-top: 110px;

@@ -36,7 +36,7 @@
             right: -1px;
             width: 237px;
             height: 114px;
-            background: url(../../img/corner2.svg) no-repeat center / cover;
+            background: url(../img/corner2.svg) no-repeat center / cover;
         }
 
         &::after {
@@ -46,14 +46,14 @@
             left: -2px;
             width: 155px;
             height: 156px;
-            background: url(../../img/corner1.svg) no-repeat center / cover;
+            background: url(../img/corner1.svg) no-repeat center / cover;
         }
     }
 
     &__slide-icon {
         width: 59px;
         height: 48px;
-        background: url(../../img/reviews-icon.svg) no-repeat center / cover;
+        background: url(../img/reviews-icon.svg) no-repeat center / cover;
     }
 
     &__slide-stars {
@@ -69,11 +69,11 @@
         height: 24px;
 
         &--light {
-            background: url(../../img/star-light.svg);
+            background: url(../img/star-light.svg);
         }
 
         &--dark {
-            background: url(../../img/star-dark.svg);
+            background: url(../img/star-dark.svg);
         }
     }
 
