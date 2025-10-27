@@ -50,6 +50,7 @@
         transition: all 0.3s ease-in-out;
         width: 100%;
         position: relative;
+        background: rgba(217, 217, 217, 0.04);
         
         &::before {
             content: '';

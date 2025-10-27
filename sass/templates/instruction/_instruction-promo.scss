@@ -1,0 +1,13 @@
+.instruction-promo {
+    @include flex-center-center;
+    margin-top: 21px;
+    height: 435px;
+    background: url(../img/promo-bg-grid.png) no-repeat center / cover;
+    border-radius: $border-radius;
+    border: 1px solid $gray;
+
+    &__img {
+        width: 362px;
+        height: auto;
+    }
+}

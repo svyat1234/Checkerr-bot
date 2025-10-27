@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Анимация текста и блока с видео в секции service
     function phoneVideoAnimation () {
+        if (!document.querySelector('.service')) {
+            return;
+        }
+
         if (window.innerWidth > 900) {
             const textSections = document.querySelectorAll('.text-section');
             const videoItems = document.querySelectorAll('.video-item');
@@ -85,6 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Функционал для аккордеона вопросов
     function questionsAccordion() {
+
+        if (!document.querySelector('.questions')) {
+            return;
+        }
+
         const cards = document.querySelectorAll('.questions__card');
         const minHeight = 131;
         cards.forEach(card => {
@@ -124,7 +133,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    questionsAccordion();
+    function instructionCardsAnimation() {
 
-    phoneVideoAnimation()
+        document.querySelectorAll('.instruction-info__card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Закрываем все другие карточки
+                document.querySelectorAll('.instruction-info__card').forEach(otherCard => {
+                    if (otherCard !== this && otherCard.classList.contains('instruction-info__card_active')) {
+                        otherCard.style.removeProperty('--dynamic-height');
+                        otherCard.classList.remove('instruction-info__card_active');
+                    }
+                });
+
+                // Открываем/закрываем текущую карточку
+                if (this.classList.contains('instruction-info__card_active')) {
+                    this.style.removeProperty('--dynamic-height');
+                } else {
+                    const contentHeight = this.scrollHeight;
+                    this.style.setProperty('--dynamic-height', `${contentHeight}px`);
+                }
+
+                this.classList.toggle('instruction-info__card_active');
+            });
+        });
+    }
+
+    questionsAccordion();
+    phoneVideoAnimation();
+    instructionCardsAnimation();
 });

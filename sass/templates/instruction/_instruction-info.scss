@@ -1,0 +1,107 @@
+.instruction-info {
+
+    &__heading {
+        @include flex-start-between;
+        
+        &-content {
+            @include column
+        }
+    }
+
+    &__title {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 35px;
+            height: 35px;
+            top: 50%;
+            left: -68px;
+            transform: translateY(-50%);
+            background: url(../img/accent-star.svg) no-repeat center / cover;
+        }
+    }
+
+    &__info {
+        max-width: 644px;
+        margin-top: 40px;
+    }
+
+    &__cards {
+        margin-top: 90px;
+        width: 100%;
+        display: grid;
+        row-gap: 30px;
+      }
+    
+    &__card {
+          max-height: 112px; // Фиксированная высота в закрытом состоянии
+          overflow: hidden;
+          padding: 35px 0 30px 0;
+          border-top: 1px solid $gray;
+          cursor: pointer;
+          transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); // Плавная easing-функция
+    
+          &-heading {
+              @include flex-center-between;
+              height: 112px;
+              margin-top: -30px;
+          }
+
+          &-title {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 110%;
+            letter-spacing: 0.48px;
+          }
+    
+          &-icon {
+            margin-right: 5px;
+            width: 22.3px;
+            height: 22.3px;
+            background: url("../img/instruction-arrow.svg") no-repeat center / cover;
+            transition: 0.5s;
+          }
+    
+          &-text-wrap {
+              margin-top: 95px;
+              display: flex;
+              justify-content: flex-end;
+          }
+    
+          &-text {
+              max-width: 50%;
+              padding-right: 170px;
+          }
+    
+          &-img {
+              margin-top: 90px;
+              width: 100%;
+              height: auto;
+              border-radius: $border-radius
+          }
+    
+          &_active {
+              max-height: var(--dynamic-height); // Динамическая высота через CSS-переменную
+              transition: 0.5s;
+              
+              & .instruction-info__card-icon {
+                  transform: rotate(90deg);
+                  background: url("../img/instruction-arrow-active.svg") no-repeat center / cover;
+              }
+          }
+    }
+
+}
+
+// 768px: заголовок в колонку
+@media screen and (max-width: 768px) {
+    .instruction-info {
+        &__heading {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+    }
+}
