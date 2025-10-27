@@ -102,7 +102,7 @@ body {
 .section-link__icon {
   height: 100%;
   width: 106px;
-  background: #14CF93 url(../../img/link-arrow.svg) no-repeat center;
+  background: #14CF93 url(../img/link-arrow.svg) no-repeat center;
   border-radius: 25px;
 }
 
@@ -178,7 +178,7 @@ body {
 .header__search-button {
   width: 19px;
   height: 19px;
-  background: url(../../img/search.svg) no-repeat center/cover;
+  background: url(../img/search.svg) no-repeat center/cover;
   border: none;
   cursor: pointer;
 }
@@ -186,7 +186,7 @@ body {
   display: none;
   width: 19px;
   height: 16px;
-  background: url(../../img/burger-menu.svg) no-repeat center/cover;
+  background: url(../img/burger-menu.svg) no-repeat center/cover;
   border: none;
   cursor: pointer;
 }
@@ -229,7 +229,7 @@ body {
   width: 40vw;
   height: 50vw;
   z-index: -1;
-  background: url(../../img/footer-bg.png) no-repeat center/cover;
+  background: url(../img/footer-bg.png) no-repeat center/cover;
 }
 .footer__content {
   display: flex;
