@@ -356,12 +356,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 90px;
+  margin-top: 78px;
   min-width: 0;
   overflow: hidden;
 }
 .promo__top-works {
-  margin-top: 5px;
+  margin-top: 150px;
   position: relative;
   width: 417px;
   height: 193px;
@@ -377,8 +377,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.11);
   border-radius: 50%;
   z-index: 2;
-  right: 101px;
-  top: 7px;
+  right: 110px;
+  bottom: 37px;
 }
 .promo__tg-link::before {
   position: absolute;
@@ -871,7 +871,7 @@ body {
 }
 .tariffs__list {
   padding: 0px 51px;
-  margin-top: 20px;
+  margin-top: 57px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -896,7 +896,18 @@ body {
   border-color: #fff;
 }
 .tariffs__item {
-  line-height: 120%;
+  position: relative;
+  line-height: 26.4px;
+  padding-left: 21.5px;
+}
+.tariffs__item::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  background: url(../../img/tariffs-item-star.svg) no-repeat center/cover;
 }
 .tariffs__desc-wrap {
   margin-top: 20px;

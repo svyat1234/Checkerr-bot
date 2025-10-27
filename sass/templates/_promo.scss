@@ -72,13 +72,13 @@
 
     &__footer {
         @include flex-start-between;
-        margin-top: 90px;
+        margin-top: 78px;
         min-width: 0; // Предотвращаем переполнение
         overflow: hidden; // Скрываем переполнение
     }
 
     &__top-works {
-        margin-top: 5px;
+        margin-top: 150px;
         position: relative;
         width: 417px;
         height: 193px;
@@ -95,8 +95,8 @@
         border: 1px solid rgba($light, 0.11);
         border-radius: 50%;
         z-index: 2;
-        right: 101px;
-        top: 7px;
+        right: 110px;
+        bottom: 37px;
 
         &::before {
             position: absolute;
