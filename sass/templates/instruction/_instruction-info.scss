@@ -32,21 +32,20 @@
         margin-top: 90px;
         width: 100%;
         display: grid;
-        row-gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
       }
     
     &__card {
-          max-height: 112px; // Фиксированная высота в закрытом состоянии
+        position: relative;
+          max-height: 130px; // Фиксированная высота в закрытом состоянии
           overflow: hidden;
           padding: 35px 0 30px 0;
-          border-top: 1px solid $gray;
+          border-top: 1px solid rgba($light, 0.2);
           cursor: pointer;
           transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1); // Плавная easing-функция
     
           &-heading {
-              @include flex-center-between;
-              height: 112px;
-              margin-top: -30px;
+              @include flex-start-between;
           }
 
           &-title {
@@ -57,7 +56,9 @@
           }
     
           &-icon {
-            margin-right: 5px;
+            position: absolute;
+            top: 35px;
+            right: 5px;
             width: 22.3px;
             height: 22.3px;
             background: url("../img/instruction-arrow.svg") no-repeat center / cover;
@@ -65,14 +66,15 @@
           }
     
           &-text-wrap {
-              margin-top: 95px;
+            max-width: calc($container / 2);
+            width: 100%;
               display: flex;
-              justify-content: flex-end;
+              justify-content: flex-start;
           }
     
           &-text {
-              max-width: 50%;
-              padding-right: 170px;
+              max-width: 533px;
+              opacity: 0;
           }
     
           &-img {
@@ -91,6 +93,19 @@
                   background: url("../img/instruction-arrow-active.svg") no-repeat center / cover;
               }
           }
+
+          &-image-block { 
+            margin-top: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          &-image-wrap {
+            @include column;
+          }
+
+          
     }
 
 }

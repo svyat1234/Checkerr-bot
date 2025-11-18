@@ -1355,22 +1355,21 @@ body {
   margin-top: 90px;
   width: 100%;
   display: grid;
-  row-gap: 30px;
+  grid-template-columns: repeat(1, 1fr);
 }
 .instruction-info__card {
-  max-height: 112px;
+  position: relative;
+  max-height: 130px;
   overflow: hidden;
   padding: 35px 0 30px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .instruction-info__card-heading {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 112px;
-  margin-top: -30px;
+  align-items: flex-start;
 }
 .instruction-info__card-title {
   font-size: 30px;
@@ -1379,20 +1378,23 @@ body {
   letter-spacing: 0.48px;
 }
 .instruction-info__card-icon {
-  margin-right: 5px;
+  position: absolute;
+  top: 35px;
+  right: 5px;
   width: 22.3px;
   height: 22.3px;
   background: url("../img/instruction-arrow.svg") no-repeat center/cover;
   transition: 0.5s;
 }
 .instruction-info__card-text-wrap {
-  margin-top: 95px;
+  max-width: 860px;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .instruction-info__card-text {
-  max-width: 50%;
-  padding-right: 170px;
+  max-width: 533px;
+  opacity: 0;
 }
 .instruction-info__card-img {
   margin-top: 90px;
@@ -1407,6 +1409,39 @@ body {
 .instruction-info__card_active .instruction-info__card-icon {
   transform: rotate(90deg);
   background: url("../img/instruction-arrow-active.svg") no-repeat center/cover;
+}
+.instruction-info__card-image-block {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.instruction-info__card-image-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 860px;
+  width: 100%;
+}
+@media (max-width: 1800px) {
+  .instruction-info__card-image-wrap {
+    max-width: 700px;
+  }
+}
+@media (max-width: 1400px) {
+  .instruction-info__card-image-wrap {
+    max-width: 600px;
+  }
+}
+@media (max-width: 1300px) {
+  .instruction-info__card-image-wrap {
+    max-width: 40vw;
+  }
+}
+@media (max-width: 1024px) {
+  .instruction-info__card-image-wrap {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {

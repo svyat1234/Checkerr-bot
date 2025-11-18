@@ -136,24 +136,69 @@ document.addEventListener('DOMContentLoaded', () => {
     function instructionCardsAnimation() {
 
         document.querySelectorAll('.instruction-info__card').forEach(card => {
+            const cardText = card.querySelector('.instruction-info__card-text');
+            
+            // Устанавливаем начальное состояние
+            if (cardText) {
+                if (card.classList.contains('instruction-info__card_active')) {
+                    gsap.set(cardText, { opacity: 1 });
+                } else {
+                    gsap.set(cardText, { opacity: 0 });
+                }
+            }
+
             card.addEventListener('click', function() {
+                const textElement = this.querySelector('.instruction-info__card-text');
+                const isActive = this.classList.contains('instruction-info__card_active');
+
                 // Закрываем все другие карточки
                 document.querySelectorAll('.instruction-info__card').forEach(otherCard => {
                     if (otherCard !== this && otherCard.classList.contains('instruction-info__card_active')) {
+                        const otherText = otherCard.querySelector('.instruction-info__card-text');
                         otherCard.style.removeProperty('--dynamic-height');
                         otherCard.classList.remove('instruction-info__card_active');
+                        
+                        // Анимация закрытия текста в других карточках
+                        if (otherText) {
+                            gsap.to(otherText, {
+                                opacity: 0,
+                                duration: 0.3,
+                                ease: "power2.out"
+                            });
+                        }
                     }
                 });
 
                 // Открываем/закрываем текущую карточку
-                if (this.classList.contains('instruction-info__card_active')) {
+                if (isActive) {
+                    // Закрываем карточку
                     this.style.removeProperty('--dynamic-height');
+                    this.classList.remove('instruction-info__card_active');
+                    
+                    // Анимация закрытия текста
+                    if (textElement) {
+                        gsap.to(textElement, {
+                            opacity: 0,
+                            duration: 0.3,
+                            ease: "power2.out"
+                        });
+                    }
                 } else {
+                    // Открываем карточку
                     const contentHeight = this.scrollHeight;
                     this.style.setProperty('--dynamic-height', `${contentHeight}px`);
+                    this.classList.add('instruction-info__card_active');
+                    
+                    // Анимация открытия текста
+                    if (textElement) {
+                        gsap.to(textElement, {
+                            opacity: 1,
+                            duration: 0.4,
+                            ease: "power2.out",
+                            delay: 0.1 // Небольшая задержка для плавности
+                        });
+                    }
                 }
-
-                this.classList.toggle('instruction-info__card_active');
             });
         });
     }
